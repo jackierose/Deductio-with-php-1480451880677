@@ -1,0 +1,9 @@
+applications:
+- path: .
+  memory: 128M
+  instances: 1
+  domain: mybluemix.net
+  name: Deductio-with-php
+  host: Deductio-with-php
+  disk_quota: 1024M
+  buildpack: php_buildpack
