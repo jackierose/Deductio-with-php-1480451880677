@@ -7,8 +7,10 @@ define('DB_DATABASE', 'Deductio-Database');
 
 $con=mysql_connect(DB_HOST,DB_USER,DB_PASSWORD,DB_NAME)
 or die("Failed to connect to MySQL: " . mysql_error());*/
-$services_json = json_decode($json,true);
-$sqldb = $services_json["us-cdbr-iron-east-04.cleardb.net"];//sqldb
+$vcap_services = $_ENV["VCAP_SERVICES"];
+$services_json = json_decode($vcap_services,true);
+//$services_json = json_decode($json,true);
+$sqldb = $services_json["sqldb"];//sqldb
 if (empty($sqldb)) {
     echo "No sqldb service instance bound. Please bind a sqldb service instance before";
     return;
