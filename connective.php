@@ -11,7 +11,8 @@ function SignIn() {
   if(!empty($_POST['uname'])) {
     $ID = $_POST['uname'];
     $Password = $_POST['pwd'];
-
+    $query = mysql_db_query("SELECT * FROM user_table WHERE user_name = '$ID'
+      AND password_id = '$Password'") or die(mysql_error());
     echo $_POST['uname'];
   }
 }
