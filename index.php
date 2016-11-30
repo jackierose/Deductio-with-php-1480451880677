@@ -1,21 +1,41 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>PHP Starter Application</title>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	<link rel="stylesheet" href="style.css" />
+<title>Login Page</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
 	<table>
-		<tr>
-			<td style='width: 30%;'>
-				<img class = 'newappIcon' src='images/newapp-icon.png'>
-			</td>
-			<td>
-				<h1 id = "message"><?php echo "Hello World!"; ?></h1>
-				<p class='description'></p> Jackie edited this! <span class="blue">PHP Starter Application</span>.
-			</td>
+      <h1 id = "deductioTitle">DEDUCTIO</h1>
+
+      <form method = "POST" action="connective.php">
+      <div class="loginContainer">
+        <p>
+          <label id = "user"><b>username</b></label>
+          <p>
+          <input type="text" placeholder="Enter Username"
+          name="uname" required>
+        </p>
+        </p>
+        <p>
+          <label id = "pass"><b>password</b></label>
+          <p>
+          <input type="password" placeholder="Enter Password"
+          name="psw" required>
+        </p>
+        </p>
+        <p>
+        <div class="buttonHolder">
+        <input id="button" type="submit" name="submit" value="Log-In">
+  			</div>
+      </p>
+        </div>
+      </form>
+		</td>
 		</tr>
 	</table>
+<script type="text/javascript" src="index.js"></script>
 </body>
 </html>
