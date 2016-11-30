@@ -8,7 +8,7 @@ function SignIn() {
     $ID = $_POST['uname'];
     $Password = $_POST['pwd'];
     $sql = "select * from user_table where user_name = '$ID' and password_id = '$Password'";
-    echo $_POST['uname'];
+    //echo $_POST['uname'];
   }
 }
 

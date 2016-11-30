@@ -13,7 +13,7 @@ $services_json = json_decode($vcap_services,true);
 $sqldb = $services_json["sqldb"];//sqldb
 if (empty($sqldb)) {
     //echo "No sqldb service instance bound. Please bind a sqldb service instance before";
-    echo "$vcap_services";
+    echo "$services_json";
     return;
 }
 
@@ -29,6 +29,5 @@ $conn_string .= "PWD=" . $sqldb_config["2c9bc5a5"] . ";";
 
 // connect to database
 $conn = db2_connect($conn_string, '', '');
-
 
  ?>
