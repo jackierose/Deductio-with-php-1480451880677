@@ -7,7 +7,13 @@ define('DB_DATABASE', 'Deductio-Database');*/
 
 //$con=mysql_connect(ini_get(DB_HOST),ini_get(DB_USER),ini_get(DB_PASSWORD))
 //or die("Failed to connect to MySQL: " . mysql_error());
-
+$services_json = json_decode($json,true);
+$sqldb = $services_json["sqldb"];
+if (empty($sqldb)) {
+    echo "No sqldb service instance bound. Please bind a sqldb service instance before";
+    return;
+}
+/*
 $sqldb_config = $services_json["sqldb"][0]["credentials"];
 
 // create DB connect string
@@ -21,6 +27,6 @@ $conn_string .= "PWD=" . $sqldb_config["2c9bc5a5"] . ";";
 // connect to database
 $conn = db2_connect($conn_string, '', '');
 
-
+*/
 
  ?>
