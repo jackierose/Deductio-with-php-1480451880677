@@ -20,11 +20,11 @@ or die("Failed to connect to MySQL: " . mysql_error());*/
 $services = getenv("VCAP_SERVICES");
 $services_json = json_decode($services,true);
 $mysql_config = $services_json["mysql-5.5"][0]["credentials"];
-$db = $mysql_config["name"];
-$host = $mysql_config["host"];
-$port = $mysql_config["port"];
-$username = $mysql_config["user"];
-$password = $mysql_config["password"];
+$db = $mysql_config["ad_bb2de57421bd8ae"];
+$host = $mysql_config["us-cdbr-iron-east-04.cleardb.net"];
+$port = $mysql_config["3306"];
+$username = $mysql_config["b272612f8dfd45"];
+$password = $mysql_config["2c9bc5a5"];
 
 echo $username;
 /*$conn = mysql_connect($host . ':' . $port, $username, $password);
@@ -34,7 +34,7 @@ if(! $conn ) {
 } else {
 
   echo "success";
-}*/
+}
 //   mysql_select_db($db);
 
 
