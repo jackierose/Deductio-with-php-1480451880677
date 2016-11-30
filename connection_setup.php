@@ -7,7 +7,7 @@ define('DB_DATABASE', 'Deductio-Database');*/
 
 //$con=mysql_connect(ini_get(DB_HOST),ini_get(DB_USER),ini_get(DB_PASSWORD))
 //or die("Failed to connect to MySQL: " . mysql_error());
-$services_json = json_decode($json,true);
+$services_json = json_decode($json,true); 
 $sqldb = $services_json["sqldb"];
 if (empty($sqldb)) {
     echo "No sqldb service instance bound. Please bind a sqldb service instance before";
