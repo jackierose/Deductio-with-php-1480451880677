@@ -30,7 +30,7 @@ function SignIn() {
     }*/
   //}
 }
-if(isset($_REQUEST['submit'])) {
+if($_SERVER["REQUEST_METHOD"] == "POST") {//isset($_REQUEST['submit'])) {
   echo "JUST FUCKING PRINT OUT SOMETHING";
 	//SignIn();
 }
