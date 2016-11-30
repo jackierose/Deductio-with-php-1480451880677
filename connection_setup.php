@@ -26,14 +26,15 @@ $port = $mysql_config["port"];
 $username = $mysql_config["user"];
 $password = $mysql_config["password"];
 
-$conn = mysql_connect($host . ':' . $port, $username, $password);
+echo $username;
+/*$conn = mysql_connect($host . ':' . $port, $username, $password);
 
 if(! $conn ) {
   echo "nope";
 } else {
 
   echo "success";
-}
+}*/
 //   mysql_select_db($db);
 
 
