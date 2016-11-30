@@ -17,7 +17,9 @@ function SignIn() {
   //echo "SESSION STARTED";
   if(!empty($_REQUEST['uname'])) { //is there a user name in the box??
     echo "THE USER NAME WAS NOT EMPTY!";
-    $query = mysql_db_query("SELECT * FROM user_table WHERE user_name = '$_POST[uname] AND password_id = '$_POST[pwd]'") or die(mysql_error());
+    $ID = $_POST['uname']];
+    $Password = $_POST['pwd'];
+    $query = mysql_db_query("SELECT * FROM user_table WHERE user_name = '$ID' AND password_id = '$Password'") or die(mysql_error());
     $row = mysql_fetch_array($query) or die(mysql_error());
 
     if(!empty($row['user_name']) AND !empty($row['password_id'])) {
