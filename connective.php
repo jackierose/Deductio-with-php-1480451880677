@@ -5,6 +5,8 @@ define('DB_USER','b272612f8dfd45');
 define('DB_PASSWORD','2c9bc5a5');
 define('DB_DATABASE', 'Deductio-Database');
 
+$con=mysql_connect(DB_HOST,DB_USER,DB_PASSWORD,DB_DATABASE) or die("Failed to connect to MySQL: " . mysql_error());
+
 session_start();
 
 function SignIn() {
@@ -12,6 +14,7 @@ function SignIn() {
     $ID = $_POST['uname'];
     $Password = $_POST['pwd'];
     $sql = "select * from user_table where user_name = '$ID' and password_id = '$Password'";
+
     echo $_POST['uname'];
   }
 }
