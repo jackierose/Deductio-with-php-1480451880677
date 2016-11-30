@@ -12,8 +12,8 @@ $ID = $_POST['uname']]; //grabbing user name login
 $Password = $_POST['pwd']; //grabbing password from login
 */
 function SignIn() {
-  //session_start(); // this will start session for user profile page
-  //echo "SESSION STARTED"; 
+   // this will start session for user profile page
+  //echo "SESSION STARTED";
   if(!empty($_REQUEST['uname'])) { //is there a user name in the box??
     echo "THE USER NAME WAS NOT EMPTY!";
     $query = mysql_db_query("SELECT * FROM user_table WHERE user_name = '$_POST[uname] AND password_id = '$_POST[pwd]'") or die(mysql_error());
