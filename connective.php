@@ -7,7 +7,7 @@ define('DB_DATABASE', 'Deductio-Database')
 
 //$con=mysql_connect(DB_HOST,DB_USER,DB_PASSWORD,DB_DATABASE) or die("Failed to connect to MySQL: " . mysql_error());
 //$db=mysql_select_db(DB_NAME,$con) or die("Failed to connect to MySQL: " . mysql_error());
-session_start();
+//session_start();
 
 function SignIn() {
   //if(!empty($_POST['uname'])) { //is there a user name in the box??
