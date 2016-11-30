@@ -12,7 +12,6 @@ function SignIn() {
     $ID = $_POST['uname'];
     $Password = $_POST['pwd'];
     $sql = "select * from user_table where user_name = '$ID' and password_id = '$Password'";
-    $query = mysql_db_query("$sql") or die(mysql_error());
     echo $_POST['uname'];
   }
 }
