@@ -6,13 +6,12 @@ define('DB_PASSWORD','2c9bc5a5');
 
 //$con=mysql_connect(DB_HOST,DB_USER,DB_PASSWORD) or die("Failed to connect to MySQL: " . mysql_error());
 //$db=mysql_select_db(DB_NAME,$con) or die("Failed to connect to MySQL: " . mysql_error());
+session_start();
 
-
-//function SignIn() {
-  //session_start(); // this will start session for user profile page
-  //echo "SESSION STARTED";
-  //if(!empty($_REQUEST['uname'])) { //is there a user name in the box??
-    //echo "THE USER NAME WAS NOT EMPTY!";
+function SignIn() {
+  session_start(); // this will start session for user profile page
+  if(!empty($_REQUEST['uname'])) { //is there a user name in the box??
+    echo "THE USER NAME WAS NOT EMPTY!";
     /*$ID = $_POST['uname']];
     $Password = $_POST['pwd'];
     $query = mysql_db_query("SELECT * FROM user_table WHERE user_name = '$ID' AND password_id = '$Password'") or die(mysql_error());
@@ -27,7 +26,6 @@ define('DB_PASSWORD','2c9bc5a5');
   //}
 //}
 if(isset($_POST['submit'])) {
-  echo "GO GLEN COCO!";
-	//SignIn();
+	SignIn();
 }
  ?>
