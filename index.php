@@ -8,7 +8,11 @@
 
 <body>
 	<table>
+		<p>
+			<img class = "logoLeft" alt = "logo image" src='../images/brainy.png'>
       <h1 id = "deductioTitle">DEDUCTIO</h1>
+			<img class = "logoRight" alt = "logo image" src='../images/brainy.png'>
+		</p>
 
       <form method = "POST" action="connective.php">
       <div class="loginContainer">
