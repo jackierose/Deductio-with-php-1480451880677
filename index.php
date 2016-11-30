@@ -8,17 +8,7 @@
 
 <body>
 	<table>
-		<div id="container" style="white-space:nowrap">
-			<div id="image1" style="display:inline;">
-				<img src="../images/brainy.png"/>
-			</div>
-			<div id="texts" style="display:inline; white-space:nowrap;">
         <h1 id = "deductioTitle">DEDUCTIO</h1>
-    </div>
-		<div id="image1" style="display:inline;">
-			<img src="../images/brainy.png"/>
-		</div>
-		</div>
 
       <form method = "POST" action="connective.php">
       <div class="loginContainer">

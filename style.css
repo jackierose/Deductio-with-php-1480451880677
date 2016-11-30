@@ -132,7 +132,11 @@ input[type=text],[type=password], select {
 	font-weight: 50;
 }
 
-
+#deductioTitle {
+	text-align: center;
+	font-size:82px;
+	font-weight: 50;
+}
 
 
 .buttonHolder{

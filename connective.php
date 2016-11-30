@@ -5,7 +5,8 @@ define('DB_USER','b272612f8dfd45');
 define('DB_PASSWORD','2c9bc5a5');
 define('DB_DATABASE', 'Deductio-Database');
 
-$con=mysqli_connect(DB_HOST,DB_USER,DB_PASSWORD,DB_NAME) or die("Failed to connect to MySQL: " . mysql_error());
+$con=mysql_connect(ini_get(DB_HOST),ini_get(DB_USER),ini_get(DB_PASSWORD))
+or die("Failed to connect to MySQL: " . mysql_error());
 
 session_start();
 
