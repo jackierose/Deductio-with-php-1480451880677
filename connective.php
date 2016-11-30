@@ -11,6 +11,7 @@ function SignIn() {
     echo $_POST['uname'];
   }
 }
+
 if(isset($_POST['submit'])) {
 	SignIn();
 }

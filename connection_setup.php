@@ -5,7 +5,7 @@ define('DB_USER','b272612f8dfd45');
 define('DB_PASSWORD','2c9bc5a5');
 define('DB_DATABASE', 'Deductio-Database');*/
 
-$con=mysql_connect(DB_HOST,DB_USER,DB_PASSWORD,DB_NAME);
+$con=mysql_connect(DB_HOST,DB_USER,DB_PASSWORD,DB_NAME)
 or die("Failed to connect to MySQL: " . mysql_error());
 /*$services_json = json_decode($json,true);
 $sqldb = $services_json["sqldb"];
