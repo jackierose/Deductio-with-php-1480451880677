@@ -12,7 +12,8 @@ $ID = $_POST['uname']]; //grabbing user name login
 $Password = $_POST['pwd']; //grabbing password from login
 */
 function SignIn() {
-  session_start(); // this will start session for user profile page
+  echo "YOU GOT TO SIGN IN METHOD";
+  /*session_start(); // this will start session for user profile page
   if(!empty($_POST['uname'])) { //is there a user name in the box??
     $query = mysql_db_query("SELECT * FROM user_table WHERE user_name = '$_POST[uname]'
       AND password_id = '$_POST[pwd]'") or die(mysql_error());
@@ -25,10 +26,10 @@ function SignIn() {
     } else {
       echo "ENTERED INCORRECT USERNAME OR PASSWORD";
     }
-  }
+  } */
 }
 if(isset($_POST['submit'])) {
-  echo "YOU CLICKED ON THE LOGIN BUTTON GOOD JOB GLEN COCO!";
-	//SignIn();
+  //echo "YOU CLICKED ON THE LOGIN BUTTON GOOD JOB GLEN COCO!";
+	SignIn();
 }
  ?>
