@@ -15,7 +15,7 @@ $Password = $_POST['pwd']; //grabbing password from login
 function SignIn() {
   //session_start(); // this will start session for user profile page
   //echo "SESSION STARTED";
-   echo "Hello, {$_SESSION["uname"]}";
+  echo "JUST FUCKING PRINT OUT SOMETHING";
 
 
   //if(!empty($_REQUEST['uname'])) { //is there a user name in the box??
