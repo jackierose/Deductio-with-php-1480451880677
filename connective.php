@@ -8,7 +8,7 @@ define('DB_DATABASE', 'Deductio-Database');
 session_start();
 
 function SignIn() {
-    echo "STILL WORKS!";
+    echo "$_POST['uname']";
 }
 if(isset($_POST['submit'])) {
 	SignIn();
