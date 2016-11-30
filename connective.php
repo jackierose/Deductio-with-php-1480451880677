@@ -16,8 +16,6 @@ function SignIn() {
   //session_start(); // this will start session for user profile page
   //echo "SESSION STARTED";
   echo "JUST FUCKING PRINT OUT SOMETHING";
-
-
   //if(!empty($_REQUEST['uname'])) { //is there a user name in the box??
     //echo "THE USER NAME WAS NOT EMPTY!";
     /*$ID = $_POST['uname']];
@@ -34,6 +32,7 @@ function SignIn() {
   //}
 }
 if(isset($_POST['submit'])) {
-	SignIn();
+  echo "JUST FUCKING PRINT OUT SOMETHING";
+	//SignIn();
 }
  ?>
