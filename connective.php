@@ -10,7 +10,7 @@ session_start();
 
 function SignIn() {
   session_start(); // this will start session for user profile page
-  if(!empty($_REQUEST['uname'])) { //is there a user name in the box??
+  if(!empty($_POST['uname'])) { //is there a user name in the box??
     echo "THE USER NAME WAS NOT EMPTY!";
     /*$ID = $_POST['uname']];
     $Password = $_POST['pwd'];
