@@ -5,8 +5,10 @@ define('DB_USER','b272612f8dfd45');
 define('DB_PASSWORD','2c9bc5a5');
 define('DB_DATABASE', 'Deductio-Database');
 
+session_start();
+
 function SignIn() {
-    echo "THE USER NAME WAS NOT EMPTY!";
+    echo "STILL WORKS!";
 }
 if(isset($_POST['submit'])) {
 	SignIn();
