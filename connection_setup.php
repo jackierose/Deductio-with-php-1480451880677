@@ -1,4 +1,5 @@
 <?php
+include('functions.php');
 /*
 $database = 'ad_bb2de57421bd8ae';
 $user = 'b272612f8dfd45';
