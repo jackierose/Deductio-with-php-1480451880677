@@ -13,11 +13,11 @@ function SignIn() {
 
     $row=mysqli_fetch_array($qr,MYSQLI_ASSOC);
 
-    if(!empty($row['user_name']) AND !empty($row['password_id'])) {
+    if(!empty($row["user_name"]) AND !empty($row["password_id"])) {
       $_SESSION['user_name'] = $row['password_id'];
       echo "SUCCESSFULLY LOGIN TO USER PROFILE PAGE...";
     } else {
-      echo "SORRY WRONG PASSWORD";
+      echo $row["user_name"];
     }
 
   }
