@@ -10,22 +10,23 @@ $port = 3306;
 $services = getenv("VCAP_SERVICES"); // searches for environment variables needed to fetch the info for data base
 $services_json = json_decode($services,true); // decodes the variables that were fetched
 $mysql_config = $services_json["cleardb"][0]["credentials"]; //sets up the servcie config
+//^^ like a dictionary, array in array....
 // sets up data base stuff
 $db = $mysql_config["name"];
 $host = $mysql_config["hostname"];
 $port = $mysql_config["port"];
 $username = $mysql_config["username"];
 $password = $mysql_config["password"];
-
+echo "I got this far";
 //tries to connect
-$con = mysqli_connect($host . ':' . $port, $username, $password, $db);
+/*$con = mysqli_connect($host . ':' . $port, $username, $password, $db);
 
 if (!$con)
   {
   echo "no";
 } else {
   echo "yes";
-}
+}*/
 
 /*
 define('DB_HOST', 'us-cdbr-iron-east-04.cleardb.net');
