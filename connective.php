@@ -11,7 +11,7 @@ function SignIn() {
     $myQuery = "select * from user_table where user_name = '$ID' and password_id = '$Password'";
     $qr = mysqli_query($con,$myQuery);
 
-    $row=mysqli_fetch_array($qr,MYSQLI_NUM);
+    $row=mysqli_fetch_array($qr,MYSQLI_ASSOC);
 
     if(!empty($row['user_name']) AND !empty($row['password_id'])) {
       $_SESSION['user_name'] = $row['password_id'];
