@@ -1,5 +1,4 @@
 <?php
-include('functions.php');
 /*
 $database = 'ad_bb2de57421bd8ae';
 $user = 'b272612f8dfd45';
@@ -27,7 +26,7 @@ $conn_string .= "PROTOCOL=TCPIP;";
 $conn_string .= "UID=" . $sqldb_config["username"] . ";";
 $conn_string .= "PWD=" . $sqldb_config["password"] . ";";
 
-$con = db2_connect($conn_string, '', '');
+$con = mysqli_connect($conn_string, '', '');
 if($con) {
   echo "YEAAA!" ;
 } else {
