@@ -1,71 +1,21 @@
 <?php
-/*define('DB_HOST', 'us-cdbr-iron-east-04.cleardb.net');
-define('DB_NAME', 'ad_bb2de57421bd8ae');
-define('DB_USER','b272612f8dfd45');
-define('DB_PASSWORD','2c9bc5a5');
-define('DB_DATABASE', 'Deductio-Database');
 
-$con=mysql_connect(DB_HOST,DB_USER,DB_PASSWORD,DB_NAME)
-or die("Failed to connect to MySQL: " . mysql_error());*/
-//$vcap_services = getenv("VCAP_SERVICES");
-//$services_json = json_decode($vcap_services,true);
-//$services_json = json_decode($json,true);
-//$sqldb = $services_json["sqldb"];//sqldb
-//if (empty($vcap_services)) {
-    //echo "No sqldb service instance bound. Please bind a sqldb service instance before";
-  //  echo "$services_json";
-//    return;
-//}
-
-/*$services = getenv("VCAP_SERVICES"); // searches for environment variables needed to fetch the info for data base
-$services_json = json_decode($services,true); // decodes the variables that were fetched
-$mysql_config = $services_json["mysql-5.5"][0]["credentials"]; //sets up the servcie config
-// sets up data base stuff
-$db = $mysql_config["ad_bb2de57421bd8ae"];
-$host = $mysql_config["us-cdbr-iron-east-04.cleardb.net"];
-$port = $mysql_config["3306"];
-$username = $mysql_config["b272612f8dfd45"];
-$password = $mysql_config["2c9bc5a5"];
-
-//tries to connect
-$conn = mysql_connect($host, $username, $password);*/
-
-$host = 'us-cdbr-iron-east-04.cleardb.net';
+$database = 'ad_bb2de57421bd8ae';
 $user = 'b272612f8dfd45';
-$pass = '2c9bc5a5';
-$db = 'ad_bb2de57421bd8ae';
+$password = '2c9bc5a5';
+$hostname = 'us-cdbr-iron-east-04.cleardb.net';
+$port = 3306;
 
-$con = mysqli_connect($host,$user,$pass,$db);
-if (mysqli_connect_errno())
-{
-  echo "Failed to connect to MySQL: " . mysqli_connect_error();
-} else {
-  echo "yea";
+$conn_string = "DRIVER={IBM DB2 ODBC DRIVER};DATABASE=$database;" .
+  "HOSTNAME=$hostname;PORT=$port;PROTOCOL=TCPIP;UID=$user;PWD=$password;";
+$conn = db2_connect($conn_string, '', '');
+
+if ($conn) {
+    echo "Connection succeeded.";
+    db2_close($conn);
 }
-
-/*
-if(! $conn ) {
-  echo "nope";
-} else {
-
-  echo "success";
+else {
+    echo "Connection failed.";
 }
-//   mysql_select_db($db);
-
-
-/*
-
-$sqldb_config = $services_json["sqldb"][0]["credentials"];
-
-// create DB connect string
-$conn_string = "DRIVER={IBM DB2 ODBC DRIVER};";
-$conn_string .= "DATABASE=" . $sqldb_config["Deductio-Database"] . ";";
-$conn_string .= "HOSTNAME=" . $sqldb_config["us-cdbr-iron-east-04.cleardb.net"] . ";";
-$conn_string .= "PROTOCOL=TCPIP;";
-$conn_string .= "UID=" . $sqldb_config["b272612f8dfd45"] . ";";
-$conn_string .= "PWD=" . $sqldb_config["2c9bc5a5"] . ";";
-
-// connect to database
-$conn = db2_connect($conn_string, '', '');*/
 
  ?>
