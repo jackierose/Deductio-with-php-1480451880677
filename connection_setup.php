@@ -6,8 +6,11 @@ $password = '2c9bc5a5';
 $hostname = 'us-cdbr-iron-east-04.cleardb.net';
 $port = 3306;
 
-$con=mysqli_init();
-echo "panic";
+$db = new mysqli($hostname,$user,$password,$database) or die("Unable to connect");
+
+echo "Good Job!";
+
+
 /*
 if (!$con)
   {
