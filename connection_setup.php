@@ -26,7 +26,7 @@ $conn_string .= "PROTOCOL=TCPIP;";
 $conn_string .= "UID=" . $sqldb_config["username"] . ";";
 $conn_string .= "PWD=" . $sqldb_config["password"] . ";";
 
-$con = mysqli_connect($conn_string, '', '');
+$con = mysqli_connect($host,$username,$password,$db);
 if($con) {
   echo "YEAAA!" ;
 } else {
