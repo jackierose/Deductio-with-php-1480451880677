@@ -9,7 +9,7 @@ $port = 3306;
 $services = getenv("VCAP_SERVICES"); // searches for environment variables needed to fetch the info for data base
 $services_json = json_decode($services,true); // decodes the variables that were fetched
 $mysql_config = $services_json["mysql-5.5"][0]["credentials"]; //sets up the servcie config
-echo services;
+echo $services;
 /*
 // sets up data base stuff
 $db = $mysql_config["ad_bb2de57421bd8ae"];
