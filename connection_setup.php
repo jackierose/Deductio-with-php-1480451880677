@@ -17,16 +17,32 @@ or die("Failed to connect to MySQL: " . mysql_error());*/
 //    return;
 //}
 
-$services = getenv("VCAP_SERVICES");
-$services_json = json_decode($services,true);
-$mysql_config = $services_json["mysql-5.5"][0]["credentials"];
+/*$services = getenv("VCAP_SERVICES"); // searches for environment variables needed to fetch the info for data base
+$services_json = json_decode($services,true); // decodes the variables that were fetched
+$mysql_config = $services_json["mysql-5.5"][0]["credentials"]; //sets up the servcie config
+// sets up data base stuff
 $db = $mysql_config["ad_bb2de57421bd8ae"];
 $host = $mysql_config["us-cdbr-iron-east-04.cleardb.net"];
 $port = $mysql_config["3306"];
 $username = $mysql_config["b272612f8dfd45"];
 $password = $mysql_config["2c9bc5a5"];
 
-$conn = mysql_connect($host, $username, $password);
+//tries to connect
+$conn = mysql_connect($host, $username, $password);*/
+
+$host = 'us-cdbr-iron-east-04.cleardb.net';
+$user = 'b272612f8dfd45';
+$pass = '2c9bc5a5';
+$db = 'ad_bb2de57421bd8ae';
+
+$con = mysqli_connect($host,$user,$pass,$db);
+if (mysqli_connect_errno())
+{
+  echo "Failed to connect to MySQL: " . mysqli_connect_error();
+} else {
+  echo "yea";
+}
+
 /*
 if(! $conn ) {
   echo "nope";
