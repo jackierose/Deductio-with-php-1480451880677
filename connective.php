@@ -17,7 +17,7 @@ function SignIn() {
       $_SESSION['user_name'] = $row['password_id'];
       echo "SUCCESSFULLY LOGIN TO USER PROFILE PAGE...";
     } else {
-      "SORRY WRONG PASSWORD";
+      echo "SORRY WRONG PASSWORD";
     }
 
   }
