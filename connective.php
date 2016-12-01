@@ -7,6 +7,7 @@ function SignIn() {
   if(!empty($_POST['uname'])) {
     $ID = $_POST['uname'];
     $Password = $_POST['pwd'];
+    echo $ID;
   }
 }
 

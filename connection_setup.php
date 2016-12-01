@@ -6,12 +6,12 @@ $password = '2c9bc5a5';
 $hostname = 'us-cdbr-iron-east-04.cleardb.net';
 $port = 3306;
 
-$con=mysqli_init(); 
+/*$con=mysqli_init();
 if (!$con)
   {
   echo "no";
 } else {
   echo "yes";
-}
+}*/
 
  ?>
