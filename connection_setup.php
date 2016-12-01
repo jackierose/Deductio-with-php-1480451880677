@@ -20,7 +20,7 @@ $username = $mysql_config["b272612f8dfd45"];
 $password = $mysql_config["2c9bc5a5"];
 
 //tries to connect
-$con = mysql_connect($host . ':' . $port, $username, $password);;
+$con = mysql_connect($host . ':' . $port, $username, $password);
 
 if (!$con)
   {
