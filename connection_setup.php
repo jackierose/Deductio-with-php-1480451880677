@@ -27,7 +27,7 @@ $conn_string .= "PROTOCOL=TCPIP;";
 $conn_string .= "UID=" . $sqldb_config["username"] . ";";
 $conn_string .= "PWD=" . $sqldb_config["password"] . ";";
 
-$con = db_connect($conn_string, '', '');
+$con = db2_connect($conn_string, '', '');
 if($con) {
   echo "YEAAA!" ;
 } else {
