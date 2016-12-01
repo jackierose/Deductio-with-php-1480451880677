@@ -17,7 +17,22 @@ $host = $mysql_config["hostname"];
 $port = $mysql_config["port"];
 $username = $mysql_config["username"];
 $password = $mysql_config["password"];
-echo "I got this far";
+
+$conn_string = "DRIVER={IBM DB2 ODBC DRIVER};";
+$conn_string .= "DATABASE=" . $sqldb_config["name"] . ";";
+$conn_string .= "HOSTNAME=" . $sqldb_config["hostname"] . ";";
+$conn_string .= "PORT=" . $sqldb_config["port"] . ";";
+$conn_string .= "PROTOCOL=TCPIP;";
+$conn_string .= "UID=" . $sqldb_config["username"] . ";";
+$conn_string .= "PWD=" . $sqldb_config["password"] . ";";
+
+$con = db2_connect($conn_string, '', '');
+if($con) {
+  echo "YEAAA!" ;
+} else {
+  echo "no";
+}
+
 //tries to connect
 /*$con = mysqli_connect($host . ':' . $port, $username, $password, $db);
 
