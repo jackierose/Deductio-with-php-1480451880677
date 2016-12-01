@@ -26,9 +26,8 @@ $port = $mysql_config["3306"];
 $username = $mysql_config["b272612f8dfd45"];
 $password = $mysql_config["2c9bc5a5"];
 
-echo $username;
-/*$conn = mysql_connect($host . ':' . $port, $username, $password);
-
+$conn = mysql_connect($host, $username, $password);
+/*
 if(! $conn ) {
   echo "nope";
 } else {
