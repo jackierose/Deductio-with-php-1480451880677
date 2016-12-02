@@ -7,12 +7,12 @@ function SignIn() {
   if(!empty($_POST['uname'])) {
     $ID = $_POST['uname'];
     $Password = $_POST['psw'];
-    $myQuery = "SELECT * FROM user_table WHERE user_name = '$ID'AND password_id = '$Password'";
+    $myQuery = "SELECT * FROM user_table"; //WHERE user_name = '$ID'AND password_id = '$Password'";
     $qr = mysqli_query($con,$myQuery);
     $row=mysqli_fetch_array($qr,MYSQLI_ASSOC);
 
     var_dump($qr);
-    var_dump($myQuery);
+  //  var_dump($myQuery);
 
 /*
     if(!empty($row['user_name']) AND !empty($row['password_id'])) {
