@@ -17,6 +17,22 @@ if (mysqli_connect_errno())
   {
   echo "Failed to connect to MySQL: " . mysqli_connect_error();
   }
-  $co
+
+  $result = mysqli_query($con, "SELECT * FROM user_table");
+
+  $return_arr = array();
+
+  while ($row = mysqli_fetch_array($result))
+  {
+      $return_arr[] = array(
+          'name' => $row['uname'],
+          'pass' => $row['password_id']
+      );
+  }
+
+  echo json_encode($return_arr);
+
+
+
 
  ?>
