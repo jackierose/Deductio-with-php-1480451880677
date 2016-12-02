@@ -11,7 +11,7 @@ $port = $mysql_config["port"];
 $username = $mysql_config["username"];
 $password = $mysql_config["password"];
 
-$con = mysqli_connect($host,$username,$password,$db);
+
 
 function SignIn() {
   if(!empty($_POST['uname'])) {
@@ -22,7 +22,7 @@ function SignIn() {
       {
       echo "Failed to connect to MySQL: " . mysqli_connect_error();
       }
-
+      $con = mysqli_connect($host,$username,$password,$db);
       $result = mysqli_query($con, "SELECT * FROM user_table");
 
       $return_arr = array();
