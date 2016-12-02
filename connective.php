@@ -9,11 +9,10 @@ function SignIn() {
     $Password = $_POST['psw'];
     //echo $ID;
     $myQuery = "select * from user_table where user_name = '$ID' and password_id = '$Password'";
-    $qr = mysqli_query($con,$myQuery);
-    var_dump($myQuery);
+    //$qr = mysqli_query($con,$myQuery);
+    $row=mysqli_fetch_array($myQuery);
 
-  //  $row=mysqli_fetch_array($qr);
-
+    var_dump($row);
 
 
 /*
