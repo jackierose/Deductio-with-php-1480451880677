@@ -10,9 +10,9 @@ function SignIn() {
     //echo $ID;
     $myQuery = "select * from user_table where user_name = '$ID' and password_id = '$Password'";
     $qr = mysqli_query($con,$myQuery);
-    var_dump($qr);
+    var_dump($myQuery);
 
-    $row=mysqli_fetch_array($qr);
+  //  $row=mysqli_fetch_array($qr);
 
 
 
