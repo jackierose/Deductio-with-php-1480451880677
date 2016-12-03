@@ -58,7 +58,7 @@ function GetRegistered() {
 $ID = $_POST['uname'];
 $Password = $_POST['psw'];
 $result = mysqli_query($con, "INSERT INTO user_table VALUES('$ID','$Password', NULL)");
-  echo "All done";
+
 }
 
 
@@ -68,6 +68,7 @@ if(isset($_POST['submit'])) {
 }
 if(isset($_POST['register'])) {
 	GetRegistered();
+  echo "I got here";
 }
 
  ?>
