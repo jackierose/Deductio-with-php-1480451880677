@@ -36,8 +36,8 @@ function SignIn() {
   }
 }
 
-// needs to handle duplicates
 
+// needs to handle duplicates
 function GetRegistered() {
   $services = getenv("VCAP_SERVICES"); // searches for environment variables needed to fetch the info for data base
   $services_json = json_decode($services,true); // decodes the variables that were fetched
@@ -54,22 +54,17 @@ function GetRegistered() {
     {
     echo "Failed to connect to MySQL: " . mysqli_connect_error();
     }
-
 $ID = $_POST['uname'];
 $Password = $_POST['psw'];
 $result = mysqli_query($con, "INSERT INTO user_table VALUES('$ID','$Password', NULL)");
-
 }
 
 
 
 if(isset($_POST['submit'])) {
 	SignIn();
-}
-if(isset($_POST['register'])) {
-
+} else if(isset($_POST['register'])) {
   echo "I got here";
-  GetRegistered();
 }
 
  ?>

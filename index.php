@@ -33,7 +33,7 @@
       </p>
 			<p>
 				<div class="buttonHolder2">
-					<a href="Registering/register.html" name = "register" type = "register"><button>Register</button></a>
+					<input id="button2" type="register" name="register" value="Register" >
   			</div>
 			</p>
         </div>
