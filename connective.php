@@ -24,7 +24,7 @@ function SignIn() {
     $Password = $_POST['psw'];
 
       $result = mysqli_query($con, "SELECT * FROM user_table");
-      var_dump($result);
+      var_dump($result); 
       /*$row = mysqli_fetch_array($result);
 
       if(!empty($row['user_name']) AND !empty($row['password_id'])) {
