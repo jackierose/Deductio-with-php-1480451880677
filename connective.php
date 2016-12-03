@@ -23,17 +23,16 @@ function SignIn() {
     $ID = $_POST['uname'];
     $Password = $_POST['psw'];
 
-      $result = mysqli_query($con, "SELECT * FROM user_table WHERE user_name = $ID AND password_id  = $Password");
+      $result = mysqli_query($con, "SELECT * FROM user_table");
       $row = mysqli_fetch_array($result);
 
       if(!empty($row['user_name']) AND !empty($row['password_id'])) {
-        $_SESSION['userName'] = $row['pass'];
+        $_SESSION['user_name'] = $row['password_id'];
         echo "SUCCESSFULLY LOGIN TO USER PROFILE PAGE...";
-      } 
+      }
 
   }
 }
-
 
 if(isset($_POST['submit'])) {
 	SignIn();

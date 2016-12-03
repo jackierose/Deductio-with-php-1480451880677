@@ -13,9 +13,4 @@ $port = $mysql_config["port"];
 $username = $mysql_config["username"];
 $password = $mysql_config["password"];
 
-
-
-
-
-
  ?>
