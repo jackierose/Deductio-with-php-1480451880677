@@ -25,17 +25,13 @@ function SignIn() {
 
       $result = mysqli_query($con, "SELECT * FROM user_table");
 
-      $return_arr = array();
+      $row = mysqli_fetch_array($result)
 
-      while ($row = mysqli_fetch_array($result))
-      {
-          $return_arr[] = array(
-              'name' => $row['user_name'],
-              'pass' => $row['password_id']
-          );
+      if(!empty($row['user_name']) AND !empty($row['password_id'])) {
+        $_SESSION['userName'] = $row['pass'];
+        echo "SUCCESSFULLY LOGIN TO USER PROFILE PAGE...";
       }
 
-      echo json_encode($return_arr);
   }
 }
 
