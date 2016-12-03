@@ -30,8 +30,8 @@ function SignIn() {
 
       if(!empty($row['user_name']) AND !empty($row['password_id'])) {
         $_SESSION['userName'] = $row['pass'];
-        echo "SUCCESSFULLY LOGIN TO USER PROFILE PAGE...";
-      } 
+        header("Location: descriptionpage/descriptionpage.php");
+      }
 
   }
 }
