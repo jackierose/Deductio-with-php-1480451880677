@@ -6,7 +6,7 @@
 	<link rel="stylesheet" href="style.css" />
 </head>
 <body>
-	<h1 class = "header">ACTUALLY THE REGISTER PAGE</h1>
+	<h1 class = "header">ACTUALLY THE REGISTER PAGE</h1> 
 	<div class = "mainHolder">
 		<p class= "description">Using the arrow keys, maneuver from start to end. Use your deduction skills.</p>
 		<div class="buttonHolder">

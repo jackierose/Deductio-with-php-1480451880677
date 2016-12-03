@@ -16,14 +16,14 @@
           <label id = "user"><b>username</b></label>
           <p>
           <input type="text" placeholder="Enter Username"
-          name="uname" >
+          name="uname" required>
         </p>
         </p>
         <p>
           <label id = "pass"><b>password</b></label>
           <p>
           <input type="password" placeholder="Enter Password"
-          name="psw" >
+          name="psw" required>
         </p>
         </p>
         <p>
