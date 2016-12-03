@@ -31,6 +31,11 @@
         <input id="button" type="submit" name="submit" value="Log-In">
   			</div>
       </p>
+			<p>
+				<div class="buttonHolder2">
+					<a href="Registering/register.html" name = "register" type = "register"><button>Register</button></a>
+  			</div>
+			</p>
         </div>
       </form>
 		</td>
