@@ -25,13 +25,13 @@ function SignIn() {
 
       $result = mysqli_query($con, "SELECT * FROM user_table");
 
-echo "okay";
-    /*  $row = mysqli_fetch_array($result)
+
+      $row = mysqli_fetch_array($result);
 
       if(!empty($row['user_name']) AND !empty($row['password_id'])) {
         $_SESSION['userName'] = $row['pass'];
         echo "SUCCESSFULLY LOGIN TO USER PROFILE PAGE...";
-      } */
+      } 
 
   }
 }
