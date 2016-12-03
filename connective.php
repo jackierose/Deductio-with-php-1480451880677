@@ -67,8 +67,9 @@ if(isset($_POST['submit'])) {
 	SignIn();
 }
 if(isset($_POST['register'])) {
-	GetRegistered();
+
   echo "I got here";
+  GetRegistered();
 }
 
  ?>
