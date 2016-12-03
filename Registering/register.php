@@ -6,11 +6,11 @@
 	<link rel="stylesheet" href="style.css" />
 </head>
 <body>
-	<h1 class = "header">ACTUALLY THE REGISTER PAGE</h1> 
+	<h1 class = "header">You are officially registered!</h1>
 	<div class = "mainHolder">
-		<p class= "description">Using the arrow keys, maneuver from start to end. Use your deduction skills.</p>
+		<p class= "description">Go back to the login page to start playing!</p>
 		<div class="buttonHolder">
-			<button class="start-button" onclick = "location.href='../level1/level1.html'" type = button>Start</button>
+			<button class="start-button" onclick = "location.href='..index.php'" type = button>Login</button>
 		</div>
 	</div>
 	<div class = "logodiv">

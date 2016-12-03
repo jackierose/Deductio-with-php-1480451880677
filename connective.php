@@ -57,7 +57,7 @@ function GetRegistered() {
 $ID = $_POST['uname'];
 $Password = $_POST['psw'];
 $result = mysqli_query($con, "INSERT INTO user_table VALUES('$ID','$Password', NULL)");
-echo "All Registered";
+header("Location: Registering/register.php")
 }
 
 
