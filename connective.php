@@ -20,16 +20,17 @@ function SignIn() {
     }
 
   if(!empty($_POST['uname'])) {
-    $ID = $_POST['uname'];
+    $ID = $_POST['uname'];"SELECT * FROM user_table"
     $Password = $_POST['psw'];
 
-      $result = mysqli_query($con, "SELECT * FROM user_table");
-      $row = mysqli_fetch_array($result);
+      $result = mysqli_query($con, "SELECT * FROM user_table WHERE user_name = $ID AND password_id  = $Password");
+      var_dump($result);
+      /*$row = mysqli_fetch_array($result);
 
       if(!empty($row['user_name']) AND !empty($row['password_id'])) {
         $_SESSION['user_name'] = $row['password_id'];
         echo "SUCCESSFULLY LOGIN TO USER PROFILE PAGE...";
-      }
+      }*/
 
   }
 }
