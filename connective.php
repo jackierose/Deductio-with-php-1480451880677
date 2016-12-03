@@ -23,7 +23,7 @@ function SignIn() {
     $ID = $_POST['uname'];
     $Password = $_POST['psw'];
 
-      $result = mysqli_query($con, "SELECT * FROM user_table");
+      $result = mysqli_query($con, "SELECT * FROM user_table WHERE user_name = $ID AND password_id  = $Password");
 
 
       $row = mysqli_fetch_array($result);
