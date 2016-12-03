@@ -29,7 +29,7 @@
         <p>
         <div class="buttonHolder">
         <input id="button" type="submit" name="submit" value="Log-In" >
-				<input id="button" type="submit" name="submit" value="Log-In" >
+				<input id="button" type="button" name="register" value="Log-In" >
   			</div>
       </p>
         </div>

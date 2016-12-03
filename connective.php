@@ -61,10 +61,9 @@ $result = mysqli_query($con, "INSERT INTO user_table VALUES('$ID','$Password', N
 
 
 
-/*if(isset($_POST['submit'])) {
+if(isset($_POST['submit'])) {
 	SignIn();
-} else  */
-if(isset($_POST['register'])) {
+} else if(isset($_POST['register'])) {
   echo "I got here";
 }
 
