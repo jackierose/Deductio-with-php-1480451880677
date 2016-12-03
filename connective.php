@@ -20,10 +20,10 @@ function SignIn() {
     }
 
   if(!empty($_POST['uname'])) {
-    $ID = $_POST['uname'];"SELECT * FROM user_table";
+    $ID = $_POST['uname'];
     $Password = $_POST['psw'];
 
-      $result = mysqli_query($con, "SELECT * FROM user_table WHERE user_name = $ID AND password_id  = $Password");
+      $result = mysqli_query($con, "SELECT * FROM user_table");
       var_dump($result);
       /*$row = mysqli_fetch_array($result);
 
