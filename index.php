@@ -29,13 +29,9 @@
         <p>
         <div class="buttonHolder">
         <input id="button" type="submit" name="submit" value="Log-In" >
+				<input id="button" type="register" name="register" value="Register" >
   			</div>
       </p>
-			<p>
-				<div class="buttonHolder2">
-					<input id="button2" type="register" name="register" value="Register" >
-  			</div>
-			</p>
         </div>
       </form>
 		</td>
