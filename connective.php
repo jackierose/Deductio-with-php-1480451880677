@@ -24,16 +24,15 @@ function SignIn() {
     $Password = $_POST['psw'];
 
       $result = mysqli_query($con, "SELECT * FROM user_table WHERE user_name = $ID AND password_id  = $Password");
-
-
       $row = mysqli_fetch_array($result);
 
       if(!empty($row['user_name']) AND !empty($row['password_id'])) {
         $_SESSION['userName'] = $row['pass'];
         header("Location: descriptionpage/descriptionpage.php");
-      } else {
-        header("Location: wrongpage/wrongpage.php");
       }
+      /*else {
+        header("Location: wrongpage/wrongpage.php");
+      } */
 
   }
 }
