@@ -32,7 +32,8 @@ function SignIn() {
         $_SESSION['userName'] = $row['pass'];
         header("Location: descriptionpage/descriptionpage.php");
       } else if {
-        header("Location: wrongpage/wrongpage.php");
+        echo "idiot";
+        //header("Location: wrongpage/wrongpage.php");
       }
 
   }
