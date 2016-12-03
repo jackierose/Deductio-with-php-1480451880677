@@ -16,19 +16,19 @@
           <label id = "user"><b>username</b></label>
           <p>
           <input type="text" placeholder="Enter Username"
-          name="uname">
+          name="uname" >
         </p>
         </p>
         <p>
           <label id = "pass"><b>password</b></label>
           <p>
           <input type="password" placeholder="Enter Password"
-          name="psw">
+          name="psw" >
         </p>
         </p>
         <p>
         <div class="buttonHolder">
-        <input id="button" type="submit" name="submit" value="Log-In" required="pws" required="uname">
+        <input id="button" type="submit" name="submit" value="Log-In" >
   			</div>
       </p>
 			<p>
