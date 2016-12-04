@@ -16,9 +16,9 @@ if (mysqli_connect_errno())
 	echo "Failed to connect to MySQL: " . mysqli_connect_error();
 }
 
-echo $_SESSION['user_name'];
-	//$result = mysqli_query($con, "SELECT * FROM user_table WHERE user_name = '$_SESSION['user_name']'");
-	//$row = mysqli_fetch_array($result);
+//echo $_SESSION['user_name'];
+	$result = mysqli_query($con, "SELECT * FROM user_table WHERE user_name = '$_SESSION['user_name']'");
+	$row = mysqli_fetch_array($result);
 	/* if($row['level'] == NULL) {
 		 $path = '../introlevel/introlevel.php';
 		 echo "I got here";
@@ -36,7 +36,7 @@ echo $_SESSION['user_name'];
 	<link rel="stylesheet" href="style.css" />
 </head>
 <body>
-	<h1 class = "header">$_SESSION['user_name'] </h1>
+	<h1 class = "header">DEDUCTIO </h1>
 	<div class = "mainHolder">
 		<p class= "description">Using the arrow keys, maneuver from start to end. Use your deduction skills.</p>
 		<div class="buttonHolder">
