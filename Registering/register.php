@@ -10,7 +10,7 @@
 	<div class = "mainHolder">
 		<p class= "description">Go back to the login page to start playing!</p>
 		<div class="buttonHolder">
-			<button class="start-button" onclick = "location.href='../index.php'" type = button>Login</button>
+			<button class="start-button" onclick = "location.href='../index.php'" type = button>Login</button> 
 		</div>
 	</div>
 	<div class = "logodiv">
