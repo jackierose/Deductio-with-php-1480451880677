@@ -17,7 +17,7 @@ if (mysqli_connect_errno())
 }
 //var_dump($con);
 $ID = $_SESSION['user_name'];
-	$result = mysqli_query($con, "UPDATE user_table SET level = '../level0/level0.php' WHERE user_name = $ID");
+	$result = mysqli_query($con, "UPDATE user_table SET level = '../level0/level0.php' WHERE user_name = '$ID'");
 ?>
 
 <!DOCTYPE html>
