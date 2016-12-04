@@ -25,11 +25,6 @@ var pieceX = 30 + (400/tileColumns)/2;
 var pieceY = 430 - (400/tileRows)/2;
 
 
-
-// Check whether keys are pressed to control piece motion
-var rightPressed = false;
-var leftPressed = false;
-
 // Screen will refresh every *refreshRate* milliseconds
 var refreshRate = 10;
 
@@ -92,8 +87,8 @@ function keyDownHandler(e) {
   else if(e.keyCode === 82){
 	restart();
   }
-
-  //check if the user won
+	
+  //check if the user won	
   if(pathsAreEqual()) {
     setTimeout(notify, 100);
     setTimeout(showNextButton, 100);
@@ -393,14 +388,14 @@ function draw2by2Tiles() {
 
   //lines to separate the tiles
   ctx.beginPath();
-  ctx.rect(229, 30, 2, 400);
+  ctx.rect(227, 30, 3, 400);
   ctx.fillStyle = "#000000";
   ctx.fill();
   ctx.closePath();
 
   //lines to separate the tiles
   ctx.beginPath();
-  ctx.rect(30, 229, 400, 2);
+  ctx.rect(30, 230, 400, 3);
   ctx.fillStyle = "#000000";
   ctx.fill();
   ctx.closePath();

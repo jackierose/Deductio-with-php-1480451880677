@@ -42,6 +42,9 @@ var tileHeight = 400 / tileRows;
 /***** THIS MUST BE SET FOR EACH PUZZLE *****/
 var winPath = ["right", "up", "right", "down", "right", "up", "up", "left", "up", "right"];
 
+var winX = 380;
+var winY = 80;
+
 // This array stores the users path. We will check if this equals winPath
 var userPath = [];
 
@@ -94,11 +97,21 @@ function keyDownHandler(e) {
     setTimeout(notify, 100);
     setTimeout(showNextButton, 100);
   }
+
+  //check if the user is in the end square but reached there incorrectly
+  else if(pieceX === winX && pieceY === winY && !pathsAreEqual() ){
+    setTimeout(notifyLost, 100);
+  }
 }
 
 // function to alert the user they won!
 function notify() {
   alert("You win!");
+}
+
+// function to alert the user they lost
+function notifyLost(){
+	alert("Incorrect path, to try again press the reset button");
 }
 
 //function to reset the peice to the starting position
