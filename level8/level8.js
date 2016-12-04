@@ -12,6 +12,7 @@ var rightColor = "#6fd4d6";
 var topColor = "#feffa3";
 var bottomColor = "#7fff62";
 var mustEnterColor = "#197136";
+var dontEnterColor = "DE1919";
 
 // Set number of rows and columns for the puzzle
 var tileRows = 4;
@@ -150,23 +151,9 @@ function drawTiles() {
   ctx.fill();
   ctx.closePath();
 
-  //(1,2)
-  ctx.beginPath();
-  ctx.rect(30, 130, 100, 100);
-  ctx.fillStyle = mustEnterColor;
-  ctx.fill();
-  ctx.closePath();
-
   //(1, 3)
   ctx.beginPath();
   ctx.rect(30, 230, 100, 100);
-  ctx.fillStyle = topColor;
-  ctx.fill();
-  ctx.closePath();
-
-  //(2, 2)
-  ctx.beginPath();
-  ctx.rect(130, 130, 100, 100);
   ctx.fillStyle = topColor;
   ctx.fill();
   ctx.closePath();
@@ -192,17 +179,10 @@ function drawTiles() {
   ctx.fill();
   ctx.closePath();
 
-  //(3, 2)
-  ctx.beginPath();
-  ctx.rect(230, 130, 100, 100);
-  ctx.fillStyle = topColor;
-  ctx.fill();
-  ctx.closePath();
-
   //(3, 3)
   ctx.beginPath();
   ctx.rect(230, 230, 100, 100);
-  ctx.fillStyle = bottomColor;
+  ctx.fillStyle = dontEnterColor;
   ctx.fill();
   ctx.closePath();
 
@@ -210,14 +190,6 @@ function drawTiles() {
   ctx.beginPath();
   ctx.rect(230, 330, 100, 100);
   ctx.fillStyle = rightColor;
-  ctx.fill();
-  ctx.closePath();
-
-
-  //(4, 2)
-  ctx.beginPath();
-  ctx.rect(330, 130, 100, 100);
-  ctx.fillStyle = topColor;
   ctx.fill();
   ctx.closePath();
 
