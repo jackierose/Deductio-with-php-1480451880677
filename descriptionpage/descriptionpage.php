@@ -16,7 +16,7 @@ if (mysqli_connect_errno())
 	echo "Failed to connect to MySQL: " . mysqli_connect_error();
 }
 
-var_dump($_SESSION(user_name));
+var_dump($_SESSION['user_name']);
 	//$result = mysqli_query($con, "INSERT INTO user_table VALUES('$_SESSION['work']','xxxxxxxx', 'xxxxxxxx-xxxxxxx')");
 ?>
 
