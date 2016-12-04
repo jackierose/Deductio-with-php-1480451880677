@@ -15,11 +15,11 @@ if (mysqli_connect_errno())
 	{
 	echo "Failed to connect to MySQL: " . mysqli_connect_error();
 }
-var_dump($con);
-//$ID = $_SESSION['user_name'];
-	//$result = mysqli_query($con, "SELECT * FROM user_table WHERE user_name = '$ID'");
-	//$row = mysqli_fetch_array($result);
-	vardump($result);
+//var_dump($con);
+$ID = $_SESSION['user_name'];
+	$result = mysqli_query($con, "SELECT * FROM user_table WHERE user_name = '$ID'");
+	$row = mysqli_fetch_array($result);
+	//var_dump($row['level']);
 	/* if($row['level'] == NULL) {
 		 $path = '../introlevel/introlevel.php';
 		 echo "I got here";
