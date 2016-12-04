@@ -56,8 +56,17 @@ function GetRegistered() {
     }
 $ID = $_POST['uname'];
 $Password = $_POST['psw'];
-$result = mysqli_query($con, "INSERT INTO user_table VALUES('$ID','$Password', NULL)");
-header("Location: Registering/register.php");
+
+$ask = mysqli_query($con, "SELECT * FROM user_table WHERE user_name = '$ID'");
+$row = mysqli_fetch_array($ask);
+if($row['user_name'] == NULL) {
+  $result = mysqli_query($con, "INSERT INTO user_table VALUES('$ID','$Password', NULL)");
+  header("Location: Registering/register.php");
+} else {
+  $message = "This username is taken.";
+echo "<script type='text/javascript'>alert('$message');</script>";
+}
+
 }
 
 
