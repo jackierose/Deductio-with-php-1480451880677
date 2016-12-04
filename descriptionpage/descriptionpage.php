@@ -19,13 +19,12 @@ if (mysqli_connect_errno())
 $ID = $_SESSION['user_name'];
 	$result = mysqli_query($con, "SELECT * FROM user_table WHERE user_name = '$ID'");
 	$row = mysqli_fetch_array($result);
-	//var_dump($row['level']);
-	/* if($row['level'] == NULL) {
+	if($row['level'] == NULL) {
 		 $path = '../introlevel/introlevel.php';
 		 echo "I got here";
 } else {
 	$path = $row['level'];
-}*/
+}
 ?>
 
 
