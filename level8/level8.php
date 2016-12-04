@@ -17,13 +17,15 @@ if (mysqli_connect_errno())
 }
 
 $ID = $_SESSION['user_name'];
-	$result = mysqli_query($con, "UPDATE user_table SET level = '../level7/level7.php' WHERE user_name = '$ID'");
+	$result = mysqli_query($con, "UPDATE user_table SET level = '../level8/level8.php' WHERE user_name = '$ID'");
 ?>
+
+
 
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Level 7</title>
+	<title>Level 8</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<link rel="stylesheet" href="style.css" />
 </head>
@@ -37,9 +39,9 @@ $ID = $_SESSION['user_name'];
 		<button class="start-button" onclick = "restart();" type = button>Restart</button>
 	</div>
 	<div class="buttonHolder">
-		<button class="start-button" id = "nextButton" style="visibility:hidden;" onclick = "location.href='../level8/level8.php'" type = button>Next Level</button>
+		<button class="start-button" id = "nextButton" style="visibility:hidden;" onclick = "location.href='../level9/level9.php'" type = button>Next Level</button>
 	</div>
 
-    <script type="text/javascript" src="level7.js"></script>
+    <script type="text/javascript" src="level8.js"></script>
 </body>
 </html>
