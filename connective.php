@@ -57,7 +57,7 @@ function GetRegistered() {
 $ID = $_POST['uname'];
 $Password = $_POST['psw'];
 $result = mysqli_query($con, "INSERT INTO user_table VALUES('$ID','$Password', NULL)");
-header("Location: Registering/register.php")
+header("Location: Registering/register.php");
 }
 
 
@@ -66,7 +66,7 @@ if(isset($_POST['submit'])) {
   echo "Sign in ";
 	//SignIn();
 } else if(isset($_POST['register'])) {
-  echo "Register"; 
+  echo "Register";
   //GetRegistered();
 }
 
