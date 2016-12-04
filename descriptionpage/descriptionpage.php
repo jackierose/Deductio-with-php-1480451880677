@@ -16,9 +16,9 @@ if (mysqli_connect_errno())
 	echo "Failed to connect to MySQL: " . mysqli_connect_error();
 }
 $ID = $_SESSION['user_name'];
-echo "SELECT * FROM user_table WHERE user_name = '$ID'";
-	//$result = mysqli_query($con, "SELECT * FROM user_table WHERE user_name = '$_SESSION['user_name']'");
-	//$row = mysqli_fetch_array($result);
+	$result = mysqli_query($con, "SELECT * FROM user_table WHERE user_name = '$ID'");
+	$row = mysqli_fetch_array($result);
+	vardump($row);
 	/* if($row['level'] == NULL) {
 		 $path = '../introlevel/introlevel.php';
 		 echo "I got here";
