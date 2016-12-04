@@ -1,0 +1,62 @@
+/* style.css
+ * This file provides css styles.
+ */
+
+@import url('https://fonts.googleapis.com/css?family=Fontdiner+Swanky');
+ 
+body,html {
+	/*background-color: #99c2ff;*/
+	width : 100%;
+	background: linear-gradient(to bottom right, #b3d1ff,#80B3Ff,#4d94ff );
+	height: 100%;
+	margin: 0 auto;
+	font-family: "Fontdiner Swanky", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	color: #ffffff;
+	overflow: hidden;
+}
+
+.header{
+	text-align: center;
+}
+
+.description{
+	text-align: center;
+}
+
+.buttonHolder{
+	text-align: center;
+}
+
+.start-button {
+    background-color: #4d94ff;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    /*-webkit-transition-duration: 0.4s;  Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+
+.start-button:hover{
+	text-decoration: none;
+	padding: 16px 32px;
+	background-color: #005ce6;
+    color: white;
+}
+
+.start-button a{
+	text-decoration: none;
+	color: white;
+}
+
+canvas {
+	background: #66879e; 
+	display: block; 
+	margin: 0 auto; 
+}
