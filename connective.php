@@ -64,8 +64,8 @@ if($row['user_name'] == NULL) {
   header("Location: Registering/register.php");
 } else {
   echo "<script>
-  alert('There are no fields to generate a report');
-  window.location.href='connective.php';
+  alert('This username has already been taken.');
+  window.location.href='index.php';
   </script>";
 }
 
