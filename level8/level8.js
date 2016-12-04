@@ -12,7 +12,7 @@ var rightColor = "#6fd4d6";
 var topColor = "#feffa3";
 var bottomColor = "#7fff62";
 var mustEnterColor = "#197136";
-var dontEnterColor = "DE1919";
+var dontEnterColor = "#DE1919";
 
 // Set number of rows and columns for the puzzle
 var tileRows = 4;
