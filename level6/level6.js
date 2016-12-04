@@ -37,7 +37,7 @@ var tileHeight = 400 / tileRows;
 /* ++++++++++++++ GAME FUNCTION ARRAYS +++++++++++++++++++*/
 // This array stores the win condition.
 /***** THIS MUST BE SET FOR EACH PUZZLE *****/
-var winPath = ["right", "right", "right", "up", "up", "up"];
+var winPath = ["up", "right", "up", "up", "right", "right"];
 
 var winX = 380;
 var winY = 80;
@@ -160,14 +160,7 @@ function drawTiles() {
   //(1, 3)
   ctx.beginPath();
   ctx.rect(30, 230, 100, 100);
-  ctx.fillStyle = topColor;
-  ctx.fill();
-  ctx.closePath();
-
-  //(2, 1)
-  ctx.beginPath();
-  ctx.rect(130, 30, 100, 100);
-  ctx.fillStyle = topColor;
+  ctx.fillStyle = rightColor;
   ctx.fill();
   ctx.closePath();
 
@@ -181,7 +174,7 @@ function drawTiles() {
   //(2,3)
   ctx.beginPath();
   ctx.rect(130, 230, 100, 100);
-  ctx.fillStyle = topColor;
+  ctx.fillStyle = mustEnterColor;
   ctx.fill();
   ctx.closePath();
 
@@ -195,7 +188,7 @@ function drawTiles() {
   //(3, 1)
   ctx.beginPath();
   ctx.rect(230, 30, 100, 100);
-  ctx.fillStyle = topColor;
+  ctx.fillStyle = rightColor;
   ctx.fill();
   ctx.closePath();
 
@@ -209,7 +202,7 @@ function drawTiles() {
   //(3, 3)
   ctx.beginPath();
   ctx.rect(230, 230, 100, 100);
-  ctx.fillStyle = topColor;
+  ctx.fillStyle = bottomColor;
   ctx.fill();
   ctx.closePath();
 
