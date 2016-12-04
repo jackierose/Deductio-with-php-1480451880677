@@ -21,7 +21,6 @@ $ID = $_SESSION['user_name'];
 	$row = mysqli_fetch_array($result);
 	if($row['level'] == NULL) {
 		 $path = '../introlevel/introlevel.php';
-		 echo "I got here";
 } else {
 	$path = $row['level'];
 }
@@ -40,7 +39,7 @@ $ID = $_SESSION['user_name'];
 	<div class = "mainHolder">
 		<p class= "description">Using the arrow keys, maneuver from start to end. Use your deduction skills.</p>
 		<div class="buttonHolder">
-			<button class="start-button" onclick = "location.href='../introlevel/introlevel.php'" type = button>Start</button>
+			<button class="start-button" onclick = "location.href='<?= $path ?>'" type = button>Start</button>
 		</div>
 	</div>
 	<div class = "logodiv">
