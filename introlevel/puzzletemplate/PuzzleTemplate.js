@@ -10,7 +10,7 @@ var ctx = canvas.getContext("2d");
 var leftColor = "#fc98fd";
 var rightColor = "#6fd4d6";
 var topColor = "#feffa3";
-var bottomColor = "#7fff62"
+var bottomColor = "#7fff62";
 
 // Set number of rows and columns for the puzzle
 var tileRows = 4;
@@ -91,15 +91,15 @@ function keyDownHandler(e) {
   else if(e.keyCode === 82){
 	restart();
   }
-				
+
   //check if the user won
   if(pathsAreEqual()) {
     setTimeout(notify, 100);
     setTimeout(showNextButton, 100);
   }
-  //check if the user is in the end square but reached there incorrectly		
-  else if(pieceX === winX && pieceY === winY && !pathsAreEqual() ){		
-  	setTimeout(notifyLost, 100);		
+  //check if the user is in the end square but reached there incorrectly
+  else if(pieceX === winX && pieceY === winY && !pathsAreEqual() ){
+  	setTimeout(notifyLost, 100);
   }
 }
 
