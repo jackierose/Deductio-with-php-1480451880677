@@ -39,8 +39,8 @@ var tileHeight = 400 / tileRows;
 // This array stores the win condition.
 /***** THIS MUST BE SET FOR EACH PUZZLE *****/
 var winPath = ["up", "up", "right", "up", "right", "down", "right", "up"];
-var winX = 330;
-var winY = 130;
+var winX = 380;
+var winY = 80;
 
 // This array stores the users path. We will check if this equals winPath
 var userPath = [];
