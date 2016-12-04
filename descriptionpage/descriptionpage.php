@@ -10,7 +10,7 @@
 	<div class = "mainHolder">
 		<p class= "description">Using the arrow keys, maneuver from start to end. Use your deduction skills.</p>
 		<div class="buttonHolder">
-			<button class="start-button" onclick = "location.href='../level1/level1.html'" type = button>Start</button>
+			<button class="start-button" onclick = "location.href='../introlevel/introlevel.html'" type = button>Start</button>
 		</div>
 	</div>
 	<div class = "logodiv">
