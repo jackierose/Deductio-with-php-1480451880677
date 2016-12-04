@@ -63,9 +63,8 @@ if($row['user_name'] == NULL) {
   $result = mysqli_query($con, "INSERT INTO user_table VALUES('$ID','$Password', NULL)");
   header("Location: Registering/register.php");
 } else {
-  $message = "This username is taken.";
-echo "<script type='text/javascript'>alert('$message');</script>";
-header("Location: index.php");
+  alert('This username is taken.');
+  window.location = 'index.php';
 }
 
 }
