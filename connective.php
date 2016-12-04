@@ -63,11 +63,9 @@ header("Location: Registering/register.php");
 
 
 if(isset($_POST['submit'])) {
-  echo "Sign in ";
-	//SignIn();
+	SignIn();
 } else if(isset($_POST['register'])) {
-  echo "Register";
-  //GetRegistered();
+  GetRegistered();
 }
 
  ?>
