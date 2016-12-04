@@ -39,7 +39,7 @@ $ID = $_SESSION['user_name'];
 		<button class="start-button" onclick = "restart();" type = button>Restart</button>
 	</div>
 	<div class="buttonHolder">
-		<button class="start-button" id = "nextButton" style="visibility:hidden;" onclick = "location.href='../level9/level9.php'" type = button>Next Level</button>
+		<button class="start-button" id = "nextButton" style="visibility:hidden;" onclick = "location.href='../winPage/winPage.html'" type = button>Next Level</button>
 	</div>
 
     <script type="text/javascript" src="level8.js"></script>
