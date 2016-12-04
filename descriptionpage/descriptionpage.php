@@ -17,8 +17,8 @@ if (mysqli_connect_errno())
 }
 $ID = $_SESSION['user_name'];
 	$result = mysqli_query($con, "SELECT * FROM user_table WHERE user_name = '$ID'");
-	$row = mysqli_fetch_array($result);
-	vardump($row);
+	//$row = mysqli_fetch_array($result);
+	vardump($result);
 	/* if($row['level'] == NULL) {
 		 $path = '../introlevel/introlevel.php';
 		 echo "I got here";
