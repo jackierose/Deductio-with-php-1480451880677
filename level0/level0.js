@@ -10,7 +10,7 @@ var ctx = canvas.getContext("2d");
 var leftColor = "#fc98fd";
 var rightColor = "#6fd4d6";
 var topColor = "#feffa3";
-var bottomColor = "#7fff62"
+var bottomColor = "#7fff62";
 
 // Set number of rows and columns for the puzzle
 var tileRows = 2;
@@ -23,12 +23,6 @@ var initX = 30 + (400/tileColumns)/2;
 var initY = 430 - (400/tileRows)/2;
 var pieceX = 30 + (400/tileColumns)/2;
 var pieceY = 430 - (400/tileRows)/2;
-
-
-
-// Check whether keys are pressed to control piece motion
-var rightPressed = false;
-var leftPressed = false;
 
 // Screen will refresh every *refreshRate* milliseconds
 var refreshRate = 10;
@@ -50,7 +44,36 @@ var userPath = [];
 
 // function to check if paths are equal
 function pathsAreEqual() {
-  return true;
+winPath1IsRight = true;
+winPath2IsRight = true;
+
+  if (winPath.length !== userPath.length) {
+    return false;
+  }
+  //checking if the first winpath is right
+  for (var i = 0; i < winPath.length; i++) {
+    if (winPath[i] != userPath[i]) {
+      if(winPath1IsRight == false){
+        break;
+      }
+      winPath1IsRight = false;
+    }
+  }
+  //checking if the first second winpath is right
+  for (var i = 0; i < winPath2.length; i++) {
+    if (winPath2[i] != userPath[i]) {
+      if(winPath2IsRight == false){
+        break;
+      }
+      winPath2IsRight = false;
+    }
+  }
+  if(winPath1IsRight || winPath2IsRight){
+    return true;
+  }
+  else{
+    return false;
+  }
 }
 
 /* ++++++++++++++ DEFINE MOVING FUNCTIONS+++++++++++++++++*/
@@ -85,11 +108,15 @@ function keyDownHandler(e) {
 	restart();
   }
 
-  //check if the user won - in this level they only need to be in the checkered square
-  if(pieceX === winX && pieceY === winY) {
+  //check if the user won
+  if(pathsAreEqual()) {
     setTimeout(notify, 100);
     setTimeout(showNextButton, 100);
 
+  }
+  //check if the user is in the end square but reached there incorrectly
+  else if(pieceX === winX && pieceY === winY && !pathsAreEqual() ){
+  	setTimeout(notifyLost, 100);
   }
 }
 
@@ -365,7 +392,19 @@ function draw2by2Flag() {
 }
 
 function draw2by2Tiles() {
+  //top left
+  ctx.beginPath();
+  ctx.rect(30, 30, 200, 200);
+  ctx.fillStyle = rightColor;
+  ctx.fill();
+  ctx.closePath();
 
+  //bottom right
+  ctx.beginPath();
+  ctx.rect(231, 231, 199, 199);
+  ctx.fillStyle = topColor;
+  ctx.fill();
+  ctx.closePath();
 
   //lines to separate the tiles
   ctx.beginPath();
