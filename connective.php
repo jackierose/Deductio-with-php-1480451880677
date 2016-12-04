@@ -66,7 +66,7 @@ if(isset($_POST['submit'])) {
   echo "Sign in ";
 	//SignIn();
 } else if(isset($_POST['register'])) {
-  echo "Register";
+  echo "Register"; 
   //GetRegistered();
 }
 
