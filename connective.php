@@ -28,6 +28,7 @@ function SignIn() {
       if(!empty($row['user_name']) AND !empty($row['password_id'])) {
         $_SESSION['user_name'] = $row['user_name'];
         $_SESSION['password_id'] = $row['password_id'];
+        $_SESSION['work'] = "Workeddddd";
         header("Location: descriptionpage/descriptionpage.php");
       } else {
         header("Location: wrongpage/wrongpage.php");
