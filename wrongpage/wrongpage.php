@@ -8,7 +8,7 @@
 <body>
 	<h1 class = "header">Wrong username or password.</h1>
 	<div class = "mainHolder">
-		<p class= "description">Please go back idiot.</p>
+		<p class= "description">Please go back to login.</p>
 	</div>
 	<div class = "logodiv">
 		<img class = "logo" alt = "logo image" src='../images/brainy.png'>
