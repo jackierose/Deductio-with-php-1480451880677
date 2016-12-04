@@ -65,7 +65,7 @@ if($row['user_name'] == NULL) {
 } else {
   echo '<script language="javascript">';
 echo 'alert("This username is already taken!")';
-echo 'window.location = "index.php"';
+//echo 'window.location = "index.php"';
 echo '</script>';
 }
 
