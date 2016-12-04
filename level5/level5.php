@@ -15,7 +15,7 @@
 		<button class="start-button" onclick = "restart();" type = button>Restart</button>
 	</div>
 	<div class="buttonHolder">
-		<button class="start-button" id = "nextButton" style="visibility:hidden;" onclick = "location.href='../level6/level6.html'" type = button>Next Level</button>
+		<button class="start-button" id = "nextButton" style="visibility:hidden;" onclick = "location.href='../level6/level6.php'" type = button>Next Level</button>
 	</div>
 
     <script type="text/javascript" src="level5.js"></script>
