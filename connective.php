@@ -65,6 +65,7 @@ if($row['user_name'] == NULL) {
 } else {
   $message = "This username is taken.";
 echo "<script type='text/javascript'>alert('$message');</script>";
+header("Location: index.php");
 }
 
 }
