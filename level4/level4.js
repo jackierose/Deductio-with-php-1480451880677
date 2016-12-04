@@ -187,12 +187,28 @@ function drawTiles() {
   ctx.fill();
   ctx.closePath();
 
+  //(3, 1)
+  ctx.beginPath();
+  ctx.rect(230, 30, 100, 100);
+  ctx.fillStyle = rightColor;
+  ctx.fill();
+  ctx.closePath();
+
   //(4, 2)
   ctx.beginPath();
   ctx.rect(330, 130, 100, 100);
   ctx.fillStyle = leftColor;
   ctx.fill();
   ctx.closePath();
+
+  //(4, 4)
+  ctx.beginPath();
+  ctx.rect(330, 330, 100, 100);
+  ctx.fillStyle = topColor;
+  ctx.fill();
+  ctx.closePath();
+
+
   // 2 x 2 grid
   if (tileRows === 2 && tileColumns === 2) {
     //vertical lines to separate the tiles
