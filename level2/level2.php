@@ -9,7 +9,7 @@
 	<h1 class = "header">Deductio </h1>
 	<canvas class="canvas" id="myCanvas" width="460" height="460"></canvas>
 	<div class="buttonHolder">
-		<button class="start-button" onclick = "location.href='../descriptionpage/descriptionpage.html'" type = button>Exit</button>
+		<button class="start-button" onclick = "location.href='../descriptionpage/descriptionpage.php'" type = button>Exit</button>
 	</div>
 	<div class="buttonHolder">
 		<button class="start-button" onclick = "restart();" type = button>Restart</button>
