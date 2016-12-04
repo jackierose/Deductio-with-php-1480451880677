@@ -63,10 +63,10 @@ if($row['user_name'] == NULL) {
   $result = mysqli_query($con, "INSERT INTO user_table VALUES('$ID','$Password', NULL)");
   header("Location: Registering/register.php");
 } else {
-  echo '<script language="javascript">';
-echo 'alert("This username is already taken!")';
-//echo 'window.location = "index.php"';
-echo '</script>';
+  echo "<script>
+  alert('There are no fields to generate a report');
+  window.location.href='connective.php';
+  </script>";
 }
 
 }
