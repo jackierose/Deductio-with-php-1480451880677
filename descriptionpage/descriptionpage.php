@@ -16,14 +16,14 @@ if (mysqli_connect_errno())
 	echo "Failed to connect to MySQL: " . mysqli_connect_error();
 }
 
-	$result = mysqli_query($con, "SELECT * FROM user_table WHERE user_name = '$_SESSION['user_name']''");
+	$result = mysqli_query($con, "SELECT * FROM user_table WHERE user_name = '$_SESSION['user_name']'");
 	$row = mysqli_fetch_array($result);
-	 if($row['level'] == NULL) {
+	/* if($row['level'] == NULL) {
 		 $path = '../introlevel/introlevel.php';
 		 echo "I got here";
 } else {
 	$path = $row['level'];
-}
+}*/
 ?>
 
 
