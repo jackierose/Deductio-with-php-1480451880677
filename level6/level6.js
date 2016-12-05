@@ -25,7 +25,8 @@ var initY = 430 - (400/tileRows)/2;
 var pieceX = 30 + (400/tileColumns)/2;
 var pieceY = 430 - (400/tileRows)/2;
 
-
+// Var to store if the dot has been eaten
+var eaten = false;
 
 // Screen will refresh every *refreshRate* milliseconds
 var refreshRate = 10;
@@ -99,6 +100,10 @@ function keyDownHandler(e) {
   else if(pieceX === winX && pieceY === winY && !pathsAreEqual() ){
     setTimeout(notifyLost, 100);
   }
+
+  if (pieceX === 80 && pieceY === 180) {
+    eaten = true;
+  }
 }
 
 // function to alert the user they won!
@@ -149,13 +154,14 @@ function drawTiles() {
   ctx.fillStyle = rightColor;
   ctx.fill();
   ctx.closePath();
-
-  //(1,2)
-  ctx.beginPath();
-  ctx.rect(30, 130, 100, 100);
-  ctx.fillStyle = mustEnterColor;
-  ctx.fill();
-  ctx.closePath();
+  
+  if (!eaten) {
+    ctx.beginPath();
+    ctx.arc(80, 180, 18, 0, Math.PI*2, false);
+    ctx.fillStyle = mustEnterColor;
+    ctx.fill();
+    ctx.closePath();
+  }
 
   //(1, 3)
   ctx.beginPath();
