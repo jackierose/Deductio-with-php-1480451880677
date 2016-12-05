@@ -121,6 +121,7 @@ function restart(){
 	userPath = [];
   	pieceX = initX;
   	pieceY = initY;
+    eaten = false;
 }
 
 //function to show the "Next Level" button when the user wins the level
@@ -154,7 +155,7 @@ function drawTiles() {
   ctx.fillStyle = rightColor;
   ctx.fill();
   ctx.closePath();
-  
+
   if (!eaten) {
     ctx.beginPath();
     ctx.arc(80, 180, 18, 0, Math.PI*2, false);
