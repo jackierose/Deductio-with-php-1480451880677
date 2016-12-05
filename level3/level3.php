@@ -25,7 +25,7 @@ $ID = $_SESSION['user_name'];
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Level 3</title>
+	<title>Level 6</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<link rel="stylesheet" href="style.css" />
 </head>

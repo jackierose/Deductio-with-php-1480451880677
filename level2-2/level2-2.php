@@ -23,7 +23,7 @@ $ID = $_SESSION['user_name'];
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Template</title>
+	<title>Level 4</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<link rel="stylesheet" href="style.css" />
 </head>
