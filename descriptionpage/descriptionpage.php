@@ -45,6 +45,8 @@ $ID = $_SESSION['user_name'];
 	<div class = "logodiv">
 		<img class = "logo" alt = "logo image" src='../images/brainy.png'>
 	</div>
+	<div class = "inspirationdiv">
+		<button class = "inpir-button" onclick = "location.href='../winPage/winPage.html'" type = button>Inspiration</button>
 </body>
 </form>
 </html>
