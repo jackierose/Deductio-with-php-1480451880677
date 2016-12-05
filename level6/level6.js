@@ -167,7 +167,7 @@ function drawTiles() {
   //(2, 2)
   ctx.beginPath();
   ctx.rect(130, 130, 100, 100);
-  ctx.fillStyle = topColor;
+  ctx.fillStyle = bottomColor;
   ctx.fill();
   ctx.closePath();
 
