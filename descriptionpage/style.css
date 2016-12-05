@@ -63,3 +63,35 @@ body,html {
 .logodiv{
 	text-align: center;
 }
+.inspir-button {
+    background-color: #66a3ff;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    /*-webkit-transition-duration: 0.4s;  Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+
+.inspir-button:hover{
+	text-decoration: none;
+	padding: 16px 32px;
+	background-color: #005ce6;
+    color: white;
+}
+
+.inspir-button a{
+	text-decoration: none;
+	color: white;
+}
+
+
+
+
+
