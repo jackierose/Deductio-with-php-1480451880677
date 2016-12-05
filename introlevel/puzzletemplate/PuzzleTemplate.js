@@ -13,8 +13,8 @@ var topColor = "#feffa3";
 var bottomColor = "#7fff62";
 
 // Set number of rows and columns for the puzzle
-var tileRows = 4;
-var tileColumns = 4;
+var tileRows = 3;
+var tileColumns = 3;
 
 // Define starting variables for the piece
 var pieceHeight = 50;
@@ -41,8 +41,8 @@ var tileHeight = 400 / tileRows;
 // This array stores the win condition.
 /***** THIS MUST BE SET FOR EACH PUZZLE *****/
 var winPath = [];
-var winX = 330;
-var winY = 130;
+var winX = 430 - (400/tileColumns)/2;
+var winY = 30 + (400/tileRows)/2;
 
 // This array stores the users path. We will check if this equals winPath
 var userPath = [];
@@ -98,7 +98,7 @@ function keyDownHandler(e) {
     setTimeout(showNextButton, 100);
   }
   //check if the user is in the end square but reached there incorrectly
-  else if(pieceX === winX && pieceY === winY && !pathsAreEqual() ){
+  else if(Math.abs(pieceX - winX) < 15 && Math.abs(pieceY - winY) < 15 && !pathsAreEqual() ){
   	setTimeout(notifyLost, 100);
   }
 }
@@ -143,17 +143,47 @@ function drawPiece() {
 
 function drawTiles() {
 
-  // 2 x 2 grid
-  if (tileRows === 2 && tileColumns === 2) {
-    draw2by2Tiles();
-    draw2by2Flag();
+  for (var i = 1; i < tileColumns; i++) {
+    ctx.beginPath();
+    ctx.rect(29 + i* (400/tileColumns), 30, 2, 400);
+    ctx.fillStyle = "#000000";
+    ctx.fill();
+    ctx.closePath();
   }
-  // 4 x 4 grid
-  if (tileRows === 4 && tileColumns === 4) {
-    draw4by4Tiles();
-    //Finish checkered flag
-    draw4by4Flag();
+
+  for (var i = 1; i < tileRows; i++) {
+    ctx.beginPath();
+    ctx.rect(30, 29 + i* (400/tileRows), 400, 2);
+    ctx.fillStyle = "#000000";
+    ctx.fill();
+    ctx.closePath();
   }
+
+  var columnLength = (400/tileColumns);
+  var rowLength = (400/tileRows);
+  for (var i = 0; i < 4; i++) {
+    for (var j = 0; j < 4; j++) {
+      ctx.beginPath();
+      ctx.rect(30 + (tileColumns - 1)*columnLength + (j*(columnLength/4)), 30 + (i*(rowLength/4)), columnLength/4, rowLength/4);
+      if ((i%2) === 0){
+        if ((j%2) === 0) {
+          ctx.fillStyle = "#000000";
+        } else {
+          ctx.fillStyle = "#ffffff";
+        }
+      } else {
+        if ((j%2) === 0) {
+          ctx.fillStyle = "#ffffff";
+        } else {
+          ctx.fillStyle = "#000000";
+        }
+      }
+      ctx.fill();
+      ctx.closePath();
+    }
+  }
+
+  
 }
 
 function drawBorder() {
@@ -274,267 +304,6 @@ function drawBorder() {
   //lines to separate the tileRows
   ctx.beginPath();
   ctx.rect(430, 30, 4, 400);
-  ctx.fillStyle = "#000000";
-  ctx.fill();
-  ctx.closePath();
-}
-
-function draw2by2Flag() {
-  //topRow
-  ctx.beginPath();
-  ctx.rect(230, 30, 50, 50);
-  ctx.fillStyle = "#000000";
-  ctx.fill();
-  ctx.closePath();
-
-  ctx.beginPath();
-  ctx.rect(280, 30, 50, 50);
-  ctx.fillStyle = "#ffffff";
-  ctx.fill();
-  ctx.closePath();
-
-  ctx.beginPath();
-  ctx.rect(330, 30, 50, 50);
-  ctx.fillStyle = "#000000";
-  ctx.fill();
-  ctx.closePath();
-
-  ctx.beginPath();
-  ctx.rect(380, 30, 50, 50);
-  ctx.fillStyle = "#ffffff";
-  ctx.fill();
-  ctx.closePath();
-
-  //2nd row
-  ctx.beginPath();
-  ctx.rect(230, 80, 50, 50);
-  ctx.fillStyle = "#ffffff";
-  ctx.fill();
-  ctx.closePath();
-
-  ctx.beginPath();
-  ctx.rect(280, 80, 50, 50);
-  ctx.fillStyle = "#000000";
-  ctx.fill();
-  ctx.closePath();
-
-  ctx.beginPath();
-  ctx.rect(330, 80, 50, 50);
-  ctx.fillStyle = "#ffffff";
-  ctx.fill();
-  ctx.closePath();
-
-  ctx.beginPath();
-  ctx.rect(380, 80, 50, 50);
-  ctx.fillStyle = "#000000";
-  ctx.fill();
-  ctx.closePath();
-
-  // 3rd Row
-  ctx.beginPath();
-  ctx.rect(230, 130, 50, 50);
-  ctx.fillStyle = "#000000";
-  ctx.fill();
-  ctx.closePath();
-
-  ctx.beginPath();
-  ctx.rect(280, 130, 50, 50);
-  ctx.fillStyle = "#ffffff";
-  ctx.fill();
-  ctx.closePath();
-
-  ctx.beginPath();
-  ctx.rect(330, 130, 50, 50);
-  ctx.fillStyle = "#000000";
-  ctx.fill();
-  ctx.closePath();
-
-  ctx.beginPath();
-  ctx.rect(380, 130, 50, 50);
-  ctx.fillStyle = "#ffffff";
-  ctx.fill();
-  ctx.closePath();
-
-
-  //4th row
-  ctx.beginPath();
-  ctx.rect(230, 180, 50, 50);
-  ctx.fillStyle = "#ffffff";
-  ctx.fill();
-  ctx.closePath();
-
-  ctx.beginPath();
-  ctx.rect(280, 180, 50, 50);
-  ctx.fillStyle = "#000000";
-  ctx.fill();
-  ctx.closePath();
-
-  ctx.beginPath();
-  ctx.rect(330, 180, 50, 50);
-  ctx.fillStyle = "#ffffff";
-  ctx.fill();
-  ctx.closePath();
-
-  ctx.beginPath();
-  ctx.rect(380, 180, 50, 50);
-  ctx.fillStyle = "#000000";
-  ctx.fill();
-  ctx.closePath();
-}
-
-function draw2by2Tiles() {
-
-  //lines to separate the tiles
-  ctx.beginPath();
-  ctx.rect(229, 30, 2, 400);
-  ctx.fillStyle = "#000000";
-  ctx.fill();
-  ctx.closePath();
-
-  //lines to separate the tiles
-  ctx.beginPath();
-  ctx.rect(30, 229, 400, 2);
-  ctx.fillStyle = "#000000";
-  ctx.fill();
-  ctx.closePath();
-}
-function draw4by4Flag() {
-  //topRow
-  ctx.beginPath();
-  ctx.rect(330, 30, 25, 25);
-  ctx.fillStyle = "#000000";
-  ctx.fill();
-  ctx.closePath();
-
-  ctx.beginPath();
-  ctx.rect(355, 30, 25, 25);
-  ctx.fillStyle = "#ffffff";
-  ctx.fill();
-  ctx.closePath();
-
-  ctx.beginPath();
-  ctx.rect(380, 30, 25, 25);
-  ctx.fillStyle = "#000000";
-  ctx.fill();
-  ctx.closePath();
-
-  ctx.beginPath();
-  ctx.rect(405, 30, 25, 25);
-  ctx.fillStyle = "#ffffff";
-  ctx.fill();
-  ctx.closePath();
-
-  //2nd row
-  ctx.beginPath();
-  ctx.rect(330, 55, 25, 25);
-  ctx.fillStyle = "#ffffff";
-  ctx.fill();
-  ctx.closePath();
-
-  ctx.beginPath();
-  ctx.rect(355, 55, 25, 25);
-  ctx.fillStyle = "#000000";
-  ctx.fill();
-  ctx.closePath();
-
-  ctx.beginPath();
-  ctx.rect(380, 55, 25, 25);
-  ctx.fillStyle = "#ffffff";
-  ctx.fill();
-  ctx.closePath();
-
-  ctx.beginPath();
-  ctx.rect(405, 55, 25, 25);
-  ctx.fillStyle = "#000000";
-  ctx.fill();
-  ctx.closePath();
-
-  // 3rd Row
-  ctx.beginPath();
-  ctx.rect(330, 80, 25, 25);
-  ctx.fillStyle = "#000000";
-  ctx.fill();
-  ctx.closePath();
-
-  ctx.beginPath();
-  ctx.rect(355, 80, 25, 25);
-  ctx.fillStyle = "#ffffff";
-  ctx.fill();
-  ctx.closePath();
-
-  ctx.beginPath();
-  ctx.rect(380, 80, 25, 25);
-  ctx.fillStyle = "#000000";
-  ctx.fill();
-  ctx.closePath();
-
-  ctx.beginPath();
-  ctx.rect(405, 80, 25, 25);
-  ctx.fillStyle = "#ffffff";
-  ctx.fill();
-  ctx.closePath();
-
-  //4th row
-  ctx.beginPath();
-  ctx.rect(330, 105, 25, 25);
-  ctx.fillStyle = "#ffffff";
-  ctx.fill();
-  ctx.closePath();
-
-  ctx.beginPath();
-  ctx.rect(355, 105, 25, 25);
-  ctx.fillStyle = "#000000";
-  ctx.fill();
-  ctx.closePath();
-
-  ctx.beginPath();
-  ctx.rect(380, 105, 25, 25);
-  ctx.fillStyle = "#ffffff";
-  ctx.fill();
-  ctx.closePath();
-
-  ctx.beginPath();
-  ctx.rect(405, 105, 25, 25);
-  ctx.fillStyle = "#000000";
-  ctx.fill();
-  ctx.closePath();
-}
-
-function draw4by4Tiles() {
-  // vertical lines to separate the tiles
-  ctx.beginPath();
-  ctx.rect(229, 30, 2, 400);
-  ctx.fillStyle = "#000000";
-  ctx.fill();
-  ctx.closePath();
-
-  ctx.beginPath();
-  ctx.rect(129, 30, 2, 400);
-  ctx.fillStyle = "#000000";
-  ctx.fill();
-  ctx.closePath();
-
-  ctx.beginPath();
-  ctx.rect(329, 30, 2, 400);
-  ctx.fillStyle = "#000000";
-  ctx.fill();
-  ctx.closePath();
-
-  //horizontal lines to separate the tiles
-  ctx.beginPath();
-  ctx.rect(30, 229, 400, 2);
-  ctx.fillStyle = "#000000";
-  ctx.fill();
-  ctx.closePath();
-
-  ctx.beginPath();
-  ctx.rect(30, 129, 400, 2);
-  ctx.fillStyle = "#000000";
-  ctx.fill();
-  ctx.closePath();
-
-  ctx.beginPath();
-  ctx.rect(30, 329, 400, 2);
   ctx.fillStyle = "#000000";
   ctx.fill();
   ctx.closePath();
