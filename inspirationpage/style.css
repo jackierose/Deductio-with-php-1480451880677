@@ -33,7 +33,7 @@ body,html {
 	margin-top: 2em;
 }
 
-.start-button {
+.inpir-button {
     background-color: #66a3ff;
     border: none;
     color: white;
@@ -49,14 +49,14 @@ body,html {
 }
 
 
-.start-button:hover{
+.inpir-button:hover{
 	text-decoration: none;
 	padding: 16px 32px;
 	background-color: #005ce6;
     color: white;
 }
 
-.start-button a{
+.inpir-button a{
 	text-decoration: none;
 	color: white;
 }
