@@ -47,6 +47,7 @@ $ID = $_SESSION['user_name'];
 	</div>
 	<div class = "inspirationdiv">
 		<button class = "inspir-button" onclick = "location.href='../inspirationpage/insiprationpage.html'" type = button>Inspiration</button>
+	</div>
 </body>
 </form>
 </html>
